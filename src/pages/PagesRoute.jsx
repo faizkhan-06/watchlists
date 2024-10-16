@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 const HomeScreen = lazy(() => import("./HomeScreen"));
 const SearchScreen = lazy(() => import("./SearchScreen"));
 
-const Pages = () => {
+const PagesRoute = () => {
   return (
     <Suspense fallback={"Loading..."}>
       <Routes>
@@ -14,4 +14,4 @@ const Pages = () => {
   );
 };
 
-export default Pages;
+export default PagesRoute;
