@@ -15,10 +15,6 @@ A web application that allows users to create and manage their movie watchlists.
 - TMDB API
 - Vite
 
-## Live Demo
-
-[Watchlists Live Demo](#) (Insert link to your live demo if available)
-
 ## Installation
 
 To set up the project locally, follow these steps:
