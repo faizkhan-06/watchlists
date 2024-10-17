@@ -27,7 +27,7 @@ const SmallScreenHeader = () => {
           />
         </div>
 
-        <div className="col-span-1">
+        <div className=" flex justify-center items-center">
           <h2 className="text-3xl font-extrabold text-coral-red">Watchlists</h2>
         </div>
 
