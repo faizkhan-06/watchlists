@@ -55,8 +55,16 @@ To set up the project locally, follow these steps:
 
 Here are some screenshots of the application:
 
+### Homepage
+
 ![Homepage](./public/screenshots/homepage.jpg)
+
+### Movie Detail
+
 ![Movie Detail](./public/screenshots/moviedetails.jpg)
+
+### Watchlist
+
 ![Watchlist](./public/screenshots/search.jpg)
 
 ## API Used
