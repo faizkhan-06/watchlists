@@ -51,6 +51,14 @@ To set up the project locally, follow these steps:
 6. **Open the Application**
    Open your web browser and navigate to `http://localhost:5173`.
 
+## Screenshots
+
+Here are some screenshots of the application:
+
+![Homepage](./public/screenshots/homepage.jpg)
+![Movie Detail](./public/screenshots/moviedetails.jpg)
+![Watchlist](./public/screenshots/search.jpg)
+
 ## API Used
 
 This project utilizes the TMDB API to fetch movie data. You can find the API documentation [here](https://developers.themoviedb.org/3).
