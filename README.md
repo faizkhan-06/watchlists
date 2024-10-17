@@ -15,6 +15,10 @@ A web application that allows users to create and manage their movie watchlists.
 - TMDB API
 - Vite
 
+## Live Demo
+
+[Watchlists Live Demo](https://watchlist-test.netlify.app/)
+
 ## Installation
 
 To set up the project locally, follow these steps:
