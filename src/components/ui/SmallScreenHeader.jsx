@@ -1,40 +1,80 @@
-import React from "react";
-import { IoHomeOutline } from "react-icons/io5";
-import { MdHistory } from "react-icons/md";
-import { FaPlus } from "react-icons/fa6";
+import React, { useState } from "react";
 import { FiUser } from "react-icons/fi";
+import { RiMenu3Line } from "react-icons/ri";
+import { FaPlus } from "react-icons/fa6";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const SmallScreenHeader = () => {
-  return (
-    <div className="flex flex-col items-center h-screen  w-16 lg:hidden">
-      <h2 className="text-center font-bold font-archivo flex justify-center items-center text-lg text-black w-10 h-10 bg-coral-red rounded-full mt-5 shadow-lg">
-        W
-      </h2>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-      <div className=" flex flex-col items-center justify-between h-full  ">
-        <div className=" flex flex-col justify-center items-center h-full">
-          <Link to={"/"}>
-            <div className="flex items-center justify-center h-16 cursor-pointer">
-              <IoHomeOutline size={24} />
-            </div>
-          </Link>
-          <Link to={"/history"}>
-            <div className="flex items-center justify-center h-16  cursor-pointer">
-              <MdHistory size={24} />
-            </div>
-          </Link>
-          <div className="flex items-center justify-center h-16 cursor-pointer">
-            <div className=" flex justify-center items-center p-1 rounded-lg bg-coral-red cursor-pointer">
-              <FaPlus className=" text-black" size={24} />
-            </div>
+  const toggleMenu = () => {
+    if (isMenuOpen) {
+      document.body.classList.remove("overflow-hidden");
+    } else {
+      document.body.classList.add("overflow-hidden");
+    }
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <>
+      <header className="lg:hidden grid grid-cols-3 items-center px-4 py-2">
+        <div className="flex items-center gap-3">
+          <RiMenu3Line
+            className="text-3xl cursor-pointer"
+            onClick={toggleMenu}
+          />
+        </div>
+
+        <div className="col-span-1">
+          <h2 className="text-3xl font-extrabold text-coral-red">Watchlists</h2>
+        </div>
+
+        <div className="flex justify-end">
+          <div className="w-8 h-8 bg-gainsboro flex justify-center items-center rounded-full">
+            <FiUser className="text-black text-2xl" />
           </div>
         </div>
-        <div className="flex items-center justify-center h-16 cursor-pointer">
-          <FiUser size={24} />
-        </div>
-      </div>
-    </div>
+      </header>
+
+      {isMenuOpen && (
+        <motion.div
+          className="fixed inset-0 gap-6 bg-black flex flex-col items-center justify-center text-white z-50"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          transition={{ duration: 0.3 }}
+        >
+          <button
+            className="absolute top-4 right-4 text-3xl"
+            onClick={toggleMenu}
+          >
+            &times;
+          </button>
+          <nav className="flex flex-col items-center gap-6">
+            <Link
+              to="/"
+              className="text-2xl hover:underline"
+              onClick={toggleMenu}
+            >
+              Home
+            </Link>
+            <Link
+              to="/history"
+              className="text-2xl hover:underline"
+              onClick={toggleMenu}
+            >
+              History
+            </Link>
+          </nav>
+          <button className="py-2 px-4 flex justify-center items-center gap-2 bg-coral-red text-black font-semibold rounded-md">
+            <FaPlus />
+            Create watchlist
+          </button>
+        </motion.div>
+      )}
+    </>
   );
 };
 

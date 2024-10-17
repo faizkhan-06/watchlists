@@ -1,18 +1,13 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
-import { IoIosSearch } from "react-icons/io";
-import { IoHomeOutline } from "react-icons/io5";
-import { MdHistory } from "react-icons/md";
+import { Link } from "react-router-dom";
 import { FaPlus } from "react-icons/fa6";
-import { FiUser } from "react-icons/fi";
-import { BsThreeDots } from "react-icons/bs";
 import Logo from "./ui/Logo";
 import SmallScreenHeader from "./ui/SmallScreenHeader";
 import UserProfile from "./UserProfile";
 import Nav from "./Nav";
 import SmallInput from "./ui/SmallInput";
 
-const Header = () => {
+const Sidebar = () => {
   return (
     <>
       <SmallScreenHeader />
@@ -40,4 +35,4 @@ const Header = () => {
   );
 };
 
-export default React.memo(Header);
+export default React.memo(Sidebar);

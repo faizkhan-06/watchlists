@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const useSearchMovies = ({ query }) => {
-  const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+  const apiKey = import.meta.env.VITE_TMDB_API;
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

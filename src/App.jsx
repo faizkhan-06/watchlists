@@ -1,14 +1,14 @@
 import React from "react";
-import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainContent from "./components/MainContent";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <section className="h-screen flex">
-        <div className="lg:w-72 h-full lg:flex-shrink-0">
-          <Header />
+      <section className="lg:h-screen lg:flex">
+        <div className="lg:w-72 lg:h-full lg:flex-shrink-0">
+          <Sidebar />
         </div>
         <MainContent />
       </section>
