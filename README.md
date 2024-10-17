@@ -63,7 +63,7 @@ Here are some screenshots of the application:
 
 ![Movie Detail](./public/screenshots/moviedetails.jpg)
 
-### Watchlist
+### Search
 
 ![Watchlist](./public/screenshots/search.jpg)
 
