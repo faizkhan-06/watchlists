@@ -43,7 +43,7 @@ To set up the project locally, follow these steps:
    Create a `.env` file in the root directory of the project and add your TMDB API key:
 
    ```
-   VITE_TMDB_API_KEY=your_api_key_here
+   VITE_TMDB_API=your_api_key_here
    ```
 
 5. **Start the Development Server**
